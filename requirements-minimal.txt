@@ -1,0 +1,6 @@
+# Minimal Requirements - Core Dependencies Only
+# Install database drivers separately based on your DB_ENGINE
+
+# Core dependencies (always required)
+python-dotenv>=1.0.0
+openpyxl>=3.1.0

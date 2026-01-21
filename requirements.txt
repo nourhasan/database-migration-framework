@@ -1,22 +1,38 @@
 # Python Database Migration Framework - Dependencies
+# Install only the drivers you need for your target database
 
-# Environment Configuration
-python-dotenv==1.0.0
+# ========================================
+# Required Core Dependencies
+# ========================================
+python-dotenv>=1.0.0       # Environment configuration
+openpyxl>=3.1.0            # Excel file reading
 
-# Excel File Reading
-openpyxl==3.1.2
+# ========================================
+# Database Drivers (Install Based on DB_ENGINE)
+# ========================================
 
-# Database Drivers
-# SQL Server - Choose one:
-pyodbc==5.0.1              # Recommended for SQL Server (requires ODBC driver)
-# pymssql==2.2.11          # Alternative (pure Python, less performant)
+# SQL Server
+# Requires: ODBC Driver 17 for SQL Server (system-level installation)
+# Install command: pip install pyodbc
+pyodbc>=5.0.0
 
-# PostgreSQL
-psycopg2-binary==2.9.9     # PostgreSQL adapter
+# PostgreSQL  
+# Install command: pip install psycopg2-binary
+# Note: Using flexible version to ensure Windows wheel availability
+psycopg2-binary>=2.9.0
 
 # MySQL
-mysql-connector-python==8.2.0  # MySQL connector
+# Install command: pip install mysql-connector-python
+mysql-connector-python>=8.0.0
 
-# Optional: Additional utilities
-# pandas==2.1.4            # For advanced data manipulation
-# sqlalchemy==2.0.23       # For ORM-style queries (not required for this framework)
+# ========================================
+# Optional: Install Only What You Need
+# ========================================
+# If you only use SQL Server:
+#   pip install python-dotenv openpyxl pyodbc
+#
+# If you only use PostgreSQL:
+#   pip install python-dotenv openpyxl psycopg2-binary
+#
+# If you only use MySQL:
+#   pip install python-dotenv openpyxl mysql-connector-python
