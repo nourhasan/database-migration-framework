@@ -1,0 +1,22 @@
+# Python Database Migration Framework - Dependencies
+
+# Environment Configuration
+python-dotenv==1.0.0
+
+# Excel File Reading
+openpyxl==3.1.2
+
+# Database Drivers
+# SQL Server - Choose one:
+pyodbc==5.0.1              # Recommended for SQL Server (requires ODBC driver)
+# pymssql==2.2.11          # Alternative (pure Python, less performant)
+
+# PostgreSQL
+psycopg2-binary==2.9.9     # PostgreSQL adapter
+
+# MySQL
+mysql-connector-python==8.2.0  # MySQL connector
+
+# Optional: Additional utilities
+# pandas==2.1.4            # For advanced data manipulation
+# sqlalchemy==2.0.23       # For ORM-style queries (not required for this framework)
